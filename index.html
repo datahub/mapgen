@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>MJS MapGen</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="dist/locator.bundled.min.css">
+    <style>
+      @font-face {
+       font-family: 'Futura Today';
+       src: url('http://www.gannett-cdn.com/uxstatic/jsonline/uscp-web-static-1779.0/fonts/futura_today_normal.eot');
+       src: url('http://www.gannett-cdn.com/uxstatic/jsonline/uscp-web-static-1779.0/fonts/futura_today_normal.eot?#iefix') format('embedded-opentype'),
+            url('http://www.gannett-cdn.com/uxstatic/jsonline/uscp-web-static-1779.0/fonts/futura_today_normal.woff') format('woff'),
+            url('http://www.gannett-cdn.com/uxstatic/jsonline/uscp-web-static-1779.0/fonts/futura_today_normal.ttf') format('truetype'),
+            url('http://www.gannett-cdn.com/uxstatic/jsonline/uscp-web-static-1779.0/fonts/futura_today_normal.svg#Futura Today') format('svg');
+       font-style: normal;
+       font-weight: normal;
+      }
+      body { font-family: "Futura Today", Helvetica, Arial, sans-serif !important;}
+    </style>
+  </head>
+  <body>
+    <div class="locator-container"></div>
+    <script src="dist/locator.bundled.min.js"></script>
+    <script type="text/javascript">
+      // Create locator
+      var l = new window.Locator({
+        el: ".locator-container",
+        zoom: 16,
+        lat: 43.042647,
+        lng: -87.915435,
+        markers: [{
+          text: "Milwaukee Journal Sentinel",
+          lat: 43.042647,
+          lng: -87.915435
+        }],
+        markerDefaults: {
+          text: "",
+          background: "rgba(0, 0, 0, 0.9)",
+          foreground: "rgba(255, 255, 255, 0.9)",
+          radius: 5,
+          fontSize: 18,
+          font: "\"Futura Today\", Helvetica, Arial, sans-serif",
+          labelDistance: 20,
+          labelWidth: 3,
+          padding: 10
+        },
+        drawingStyles: {
+          fill: false,
+          stroke: true,
+          color: "#00B8F5",
+          opacity: 0.9,
+          weight: 5,
+          fillOpacity: 0.3,
+          dashArray: "10, 15"
+        },
+        markerBackgrounds: [
+	      "rgba(0, 0, 0, 0.9)",
+	      "rgba(255, 255, 255, 0.9)",
+	      "rgba(0,155,255,0.9)",
+	      "rgba(0,165,60,0.9)",
+	      "rgba(235,30,0,0.9)",
+	      "rgba(150,0,180,0.9)",
+	      "rgba(0,195,195,0.9)",
+	      "rgba(250,95,0,0.9)",
+	      "rgba(255,192,0,0.9)",
+	      "rgba(163,163,163,0.9)",
+	    ],
+	    drawingStrokes: [
+	      "#FFFFFF",
+	      "#000000",
+	      "#009BFF",
+	      "#00A53C",
+	      "#EB1E00",
+	      "#9600B4",
+	      "#00C3C3",
+	      "#FA5F00",
+	      "#FFCC00",
+	      "#939598"
+	    ],
+	    drawingFills: [
+	      "#FFFFFF",
+	      "#000000",
+	      "#009BFF",
+	      "#00A53C",
+	      "#EB1E00",
+	      "#9600B4",
+	      "#00C3C3",
+	      "#FA5F00",
+	      "#FFCC00",
+	      "#939598"
+	    ],
+	    ratios: {
+          "1:2": 1 / 2,
+          "1:1": 1 / 1,
+          "4:3": 4 / 3,
+          "16:9": 16 / 9,
+          "2:1": 2 / 1
+        },
+        ratio: "1:1",
+        tilesets: {
+          "Mapbox Streets (MJS)": {
+            url: "https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWlsd2F1a2Vlam91cm5hbHNlbnRpbmVsIiwiYSI6IkhmS0lZZncifQ.WemgYJ9P3TcgtGIcMoP2PQ",
+            attribution: "&copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>"
+          },
+          "Mapbox Satellite (MJS)":{
+          	url: "https://api.mapbox.com/styles/v1/mapbox/satellite-streets-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWlsd2F1a2Vlam91cm5hbHNlbnRpbmVsIiwiYSI6IkhmS0lZZncifQ.WemgYJ9P3TcgtGIcMoP2PQ",
+          	attribution:"&copy; <a target='_blank' href='https://www.mapbox.com/about/maps/'>Mapbox</a> &copy; <a target='_blank' href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> &copy; <a href='https://www.digitalglobe.com/'>DigitalGlobe</a>"
+          }
+        },
+        tileset: "Mapbox Streets (MJS)",
+        title: "MJS MapGen",
+        footer: "Made by the <a href=\"//datanews.tumblr.com/\" target=\"_blank\">WNYC DataNews</a> team.  Locator only works in <a href=\"//google.com/chrome\" target=\"_blank\">Google Chrome</a> at the moment. For help/issue, contact Michael Andre at <a href=\"mailto:mandre@gannett.com\">mandre@gannett.com</a>."
+      });
+    </script>
+  </body>
+</html>
